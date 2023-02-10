@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;500;700;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'Roboto', sans-serif;
+  font-size:18px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+#calc{
+  font-family: 'Times New Roman', Times, serif;
+  color: #F8CBA6;
+  font-size: 250%;
+}
+.container{
+  top:50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  width: 256px;
+  margin: 0 auto;
+  text-align: center;
+  border: 10px solid #000;
+  background: #000;
+
 }
 
-.App-link {
-  color: #61dafb;
+.keypad{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+input[type="text"]{
+  height: 70px;
+  width: 250px;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0.772);
+  color: #fff;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+}
+#erase{
+  grid-column: 1/3;
+  grid-row: 1;
+
+}
+/* #back{
+  m
+
+} */
+
+#ans {
+  grid-column: 3/5;
+  grid-row: 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  margin: 5px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+input:focus,input:active,button:focus,button:active{
+  outline: invert;
+}
+.light{
+  background: #F8CBA6;
+}
+
+.aftereffect:hover{
+  background: #EEE9DA;
 }
